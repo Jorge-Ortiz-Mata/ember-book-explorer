@@ -1,1 +1,45 @@
 /* Ember supports plain CSS out of the box. More info: https://cli.emberjs.com/release/advanced-use/stylesheets/ */
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 15px;
+  background-color: rgb(227, 227, 227);
+}
+
+.nav-logo {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-title {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.nav-subtitle {
+  font-weight: 100;
+  font-size: 13px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-link {
+  list-style: none;
+  color: black;
+}
