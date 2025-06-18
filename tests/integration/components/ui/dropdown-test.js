@@ -1,26 +1,37 @@
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'book-explorer/tests/helpers';
-import { render } from '@ember/test-helpers';
+import { render, select } from '@ember/test-helpers';
 import { hbs } from 'ember-cli-htmlbars';
 
 module('Integration | Component | ui/dropdown', function (hooks) {
   setupRenderingTest(hooks);
 
-  test('it renders', async function (assert) {
-    // Set any properties with this.set('myProperty', 'value');
-    // Handle any actions with this.set('myAction', function(val) { ... });
+  this.topicOptions = [
+    { label: "Selecciona un tema", value: "" },
+    { label: "Science Fiction", value: "science_fiction" },
+    { label: "Fantasy", value: "fantasy" },
+    { label: "Romance", value: "romance" },
+    { label: "History", value: "history" },
+    { label: "Horror", value: "horror" },
+  ]
+  
+  this.topicSelected = undefined
 
-    await render(hbs`<Ui::Dropdown />`);
+  test('it renders the component', async function(assert) {
+    this.mockOnChange = (value) => this.topicSelected = value;
 
-    assert.dom().hasText('');
+    await render(
+      hbs`
+        <Ui::Dropdown
+          @name="topic-select"
+          @id="topic-select"
+          @options={{this.topicOptions}}
+          @onChange={{this.mockOnChange}}
+        />
+      `
+    );
 
-    // Template block usage:
-    await render(hbs`
-      <Ui::Dropdown>
-        template block text
-      </Ui::Dropdown>
-    `);
-
-    assert.dom().hasText('template block text');
+    await select("#topic-select", "horror")
+    assert.equal(this.topicSelected, "horror")
   });
 });
