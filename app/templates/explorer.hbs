@@ -2,4 +2,15 @@
 
 <section>
   <h1>EmberJS Book Explorer - Explorer Page</h1>
+
+  <div>
+    <h3>Selecciona un tópico:</h3>
+    <Ui::Dropdown 
+      @name="topic-select"
+      @id="topic-select"
+      @options={{this.topicOptions}}
+      @onChange={{this.onChange}}
+    />
+    <p>Tópico seleccionado: {{this.topicSelected}}</p>
+  </div>
 </section>
