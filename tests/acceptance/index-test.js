@@ -1,5 +1,5 @@
 import { module, test } from 'qunit';
-import { visit, currentURL, select, click } from '@ember/test-helpers';
+import { visit, click } from '@ember/test-helpers';
 import { setupApplicationTest } from 'ember-qunit';
 
 module('Acceptance | Index', function(hooks) {

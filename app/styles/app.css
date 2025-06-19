@@ -87,3 +87,12 @@ section {
   font-size: 14px;
   font-weight: 300;
 }
+
+.books-section-title {
+  font-weight: 700; 
+  font-size: 25px;
+}
+
+.empty-message {
+  font-size: 14px;
+}
