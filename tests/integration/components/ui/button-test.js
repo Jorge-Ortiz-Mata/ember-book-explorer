@@ -6,12 +6,12 @@ import { hbs } from 'ember-cli-htmlbars';
 module('Integration | Component | ui/button', function (hooks) {
   setupRenderingTest(hooks);
 
-  this.id = "button-id";
-  this.name = "button-name";
-  this.style = "primary";
-  this.label = "Save"
+  this.id = 'button-id';
+  this.name = 'button-name';
+  this.style = 'primary';
+  this.label = 'Save';
 
-  test("", async function(assert) {
+  test('', async function (assert) {
     await render(
       hbs`
         <Ui::Button 
@@ -20,9 +20,9 @@ module('Integration | Component | ui/button', function (hooks) {
           @style={{this.style}}
           @label={{this.label}}
         />
-      `
+      `,
     );
 
-    assert.dom("button").hasText(this.label);
+    assert.dom('button').hasText(this.label);
   });
 });

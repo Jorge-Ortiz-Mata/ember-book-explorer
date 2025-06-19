@@ -7,13 +7,13 @@
     <h3>Selecciona un tópico:</h3>
     <p>Tópico seleccionado: {{this.topicSelected}}</p>
 
-    <Ui::Dropdown 
+    <Ui::Dropdown
       @name="topic-select"
       @id="topic-select"
       @options={{this.topicOptions}}
       @onChange={{this.onChange}}
     />
-    <Ui::Button 
+    <Ui::Button
       @id="btn-fetch"
       @name="btn-fetch"
       @style="primary"

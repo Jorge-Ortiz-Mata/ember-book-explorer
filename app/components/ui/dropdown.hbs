@@ -1,8 +1,4 @@
-<select
-  {{ on "change" this.handleOnChange }}
-  name="{{@name}}" 
-  id="{{@id}}"
->
+<select {{on "change" this.handleOnChange}} name="{{@name}}" id="{{@id}}">
   {{#each @options as |opt|}}
     <option value="{{opt.value}}">
       {{opt.label}}

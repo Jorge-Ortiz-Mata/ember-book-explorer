@@ -7,11 +7,11 @@ module('Integration | Component | navbar', function (hooks) {
   setupRenderingTest(hooks);
 
   test('it renders the component with the logo and links', async function (assert) {
-    await render(hbs`<Ui::Navbar />`)
+    await render(hbs`<Ui::Navbar />`);
 
-    assert.dom().hasAnyText("Book Explorer");
-    assert.dom().hasAnyText("EmberJS App");
-    assert.dom().hasAnyText("Home");
-    assert.dom().hasAnyText("Explorer");
+    assert.dom().hasAnyText('Book Explorer');
+    assert.dom().hasAnyText('EmberJS App');
+    assert.dom().hasAnyText('Home');
+    assert.dom().hasAnyText('Explorer');
   });
 });

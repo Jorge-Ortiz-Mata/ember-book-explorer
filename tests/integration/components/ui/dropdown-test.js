@@ -7,18 +7,18 @@ module('Integration | Component | ui/dropdown', function (hooks) {
   setupRenderingTest(hooks);
 
   this.topicOptions = [
-    { label: "Selecciona un tema", value: "" },
-    { label: "Science Fiction", value: "science_fiction" },
-    { label: "Fantasy", value: "fantasy" },
-    { label: "Romance", value: "romance" },
-    { label: "History", value: "history" },
-    { label: "Horror", value: "horror" },
-  ]
-  
-  this.topicSelected = undefined
+    { label: 'Selecciona un tema', value: '' },
+    { label: 'Science Fiction', value: 'science_fiction' },
+    { label: 'Fantasy', value: 'fantasy' },
+    { label: 'Romance', value: 'romance' },
+    { label: 'History', value: 'history' },
+    { label: 'Horror', value: 'horror' },
+  ];
 
-  test('it renders the component', async function(assert) {
-    this.mockOnChange = (value) => this.topicSelected = value;
+  this.topicSelected = undefined;
+
+  test('it renders the component', async function (assert) {
+    this.mockOnChange = (value) => (this.topicSelected = value);
 
     await render(
       hbs`
@@ -28,10 +28,10 @@ module('Integration | Component | ui/dropdown', function (hooks) {
           @options={{this.topicOptions}}
           @onChange={{this.mockOnChange}}
         />
-      `
+      `,
     );
 
-    await select("#topic-select", "horror")
-    assert.equal(this.topicSelected, "horror")
+    await select('#topic-select', 'horror');
+    assert.equal(this.topicSelected, 'horror');
   });
 });
