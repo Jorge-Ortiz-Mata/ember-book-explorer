@@ -18,6 +18,13 @@ nav {
   background-color: rgb(227 227 227);
 }
 
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 10px;
+}
+
 .nav-logo {
   display: flex;
   flex-direction: column;
@@ -42,4 +49,41 @@ nav {
 .nav-link {
   list-style: none;
   color: black;
+}
+
+.primary {
+  padding: 5px 15px;
+  background-color: rgb(0 75 132);
+  color: #fff;
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.button {
+  cursor: pointer;
+}
+
+.books-section {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.book-div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 1px solid #dddddd;
+  border-radius: 20px;
+}
+
+.book-div h6 {
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.book-div span {
+  font-size: 14px;
+  font-weight: 300;
 }

@@ -1,0 +1,8 @@
+<div class="book-div">
+  <h6>{{@book.title}}</h6>
+  <span>ID: {{@book.cover_id}}</span>
+  <span>Año de publicación: {{@book.first_publish_year}}</span>
+  {{#each @book.authors as |author|}}
+    <span>Author: {{author.name}}</span>
+  {{/each}}
+</div>

@@ -5,12 +5,22 @@
 
   <div>
     <h3>Selecciona un tópico:</h3>
+    <p>Tópico seleccionado: {{this.topicSelected}}</p>
+
     <Ui::Dropdown 
       @name="topic-select"
       @id="topic-select"
       @options={{this.topicOptions}}
       @onChange={{this.onChange}}
     />
-    <p>Tópico seleccionado: {{this.topicSelected}}</p>
+    <Ui::Button 
+      @id="btn-fetch"
+      @name="btn-fetch"
+      @style="primary"
+      @label="Fetch"
+      @onClick={{this.getBooks}}
+    />
   </div>
+
+  <Ui::Books @books={{this.books}} />
 </section>

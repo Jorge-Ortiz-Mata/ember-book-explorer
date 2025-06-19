@@ -1,0 +1,10 @@
+<div class="books-section">
+  <h3 style="font-weight: 700; font-size: 25px;">Libros</h3>
+  {{#if @books}}
+    {{#each @books as |book|}}
+      <Ui::Book @book={{book}} />
+    {{/each}}
+  {{else}}
+    <span style="font-size: 14px;">Sin libros para mostrar</span>
+  {{/if}}
+</div>
