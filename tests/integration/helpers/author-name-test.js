@@ -1,17 +1,14 @@
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'book-explorer/tests/helpers';
 import { render } from '@ember/test-helpers';
-import { hbs } from 'ember-cli-htmlbars';
+import authorName from 'book-explorer/helpers/author-name';
 
 module('Integration | Helper | author-name', function (hooks) {
   setupRenderingTest(hooks);
 
-  // TODO: Replace this with your real tests.
   test('it renders', async function (assert) {
-    this.set('inputValue', '1234');
+    const result = authorName("Luis Perez")
 
-    await render(hbs`{{author-name this.inputValue}}`);
-
-    assert.dom().hasText('1234');
+    assert.equal(result, "luis-perez")
   });
 });

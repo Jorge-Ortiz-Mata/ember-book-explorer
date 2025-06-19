@@ -8,12 +8,14 @@ module('Integration | Component | ui/books', function (hooks) {
 
   this.emptyMessage = 'Sin libros para mostrar';
   this.title = 'Harry Potter';
+  this.key = '/works/298fnys1';
   this.cover_id = 'siue9297ecsj';
   this.first_publish_year = 1998;
   this.authors = [{ name: 'Luis Perez' }, { name: 'Jorge Ortiz' }];
 
   this.book = {
     title: this.title,
+    key: this.key,
     cover_id: this.cover_id,
     first_publish_year: this.first_publish_year,
     authors: this.authors,

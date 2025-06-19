@@ -1,0 +1,13 @@
+{{page-title "Book"}}
+
+<section>
+  <h1>EmberJS Book Explorer - Book Show Page</h1>
+  <div id="book" class="book-div">
+    <h6>{{@model.title}}</h6>
+    <p>{{@model.description}}</p>
+    <span id="book-year">Año de publicación: {{@model.first_publish_year}}</span>
+    {{#each @model.authors as |author|}}
+      <span id="author-{{author-name author.name}}">Autor: {{author.name}}</span>
+    {{/each}}
+  </div>
+</section>

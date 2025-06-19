@@ -1,8 +1,12 @@
 <div id="book-{{@book.cover_id}}" class="book-div">
   <h6>{{@book.title}}</h6>
   <span id="book-id">ID: {{@book.cover_id}}</span>
+  <span id="book-key">Key: {{@book.key}}</span>
   <span id="book-year">Año de publicación: {{@book.first_publish_year}}</span>
+  
   {{#each @book.authors as |author|}}
     <span id="author-{{author-name author.name}}">Autor: {{author.name}}</span>
   {{/each}}
+
+  <LinkTo @route="book" @model={{book-key @book.key}} id="link-{{book-key @book.key}}">Ver mas</LinkTo>
 </div>
